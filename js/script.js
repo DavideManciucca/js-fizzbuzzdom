@@ -7,16 +7,27 @@ console.log(container);
 // const sndDividend = 5;
 
 
-for (let i = 0; i<=limit ; i++) {
+for (let i = 1; i<=limit ; i++) {
   const box = document.createElement('div');
   box.className="box";
   console.log(box);
-  box.append(i)
+  
   container.append(box);
   
   if (i % 3 ===0 && i % 5 ===0) {
     box.className="box-green"
-    
+    box.append("FizzBuzz")
+  }
+  else if (i % 3 ===0){
+    box.className="box-yellow"
+    box.append("Fizz")
+  }
+  else if (i % 5 ===0){
+    box.className="box-red"
+    box.append("Fizz")
+  }
+  else{
+    box.append(i)
   }
   
  }
